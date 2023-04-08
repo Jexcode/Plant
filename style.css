@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button, input, textarea{
+  background: none;
+  outline: none;
+  border: none;
+  font: inherit;
+}
+
+body {
+  height: 100%;
+  font-size: 1rem;
+  /* overflow: hidden; */
+  -webkit-font-smoothing: antialiased;
+  background: var(--white);
+}
+
+img{
+  object-fit: cover;
+}
+
+a{
+  -webkit-tap-highlight-color: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+.ds-flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-flex-space{
+  display: flex;
+  justify-content: space-between;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.ds-grid{
+  display: grid;
+}
+
+.ds-none{
+  display: none;
+}
+
+/* Variables */
+:root {
+  --xam: 1rem;
+  --dkgreen: rgb(166, 191, 183);
+  --dkwhite: #f1f1f1;
+  --white: #fff;
+  --grey: #333;
+  --grey2: rgba(10, 10, 10, 0.4);
+  --black: #000;
+  --Josefin: 'Josefin Sans', sans-serif;
+  --Quicksand: 'Quicksand', sans-serif;
+  --bg: url(/Img/bg2.jpg);
+}
+
+/* hero */
+.hero{
+  padding: 1rem;
+  margin: 1% auto;
+  height: 98vh;
+  width: calc(98%);
+  background: var(--bg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .menu{
+  height: 100vh;
+  width: 100%;
+  background: var(--white);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: all 1s ease-in-out;
+}
+
+.hero .menu h3{
+  font-size: 4rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  text-transform: uppercase;
+}
+
+#bar {
+  aspect-ratio: 1/1;
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  transition: all 5s ease-in-out;
+  z-index: 1;
+}
+
+
+.hero .nav-fld{
+  /* gap: 5rem; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background: var(--grey2); */
+}
+
+.hero .nav-fld ul li {
+  font-size: 3rem;
+  font-weight: 500;
+  height: 100px;
+  width: 100vw;
+  text-align: center;
+  transition: all 1s ease-in-out
+  /* background: green; */
+}
+
+.hero .nav-fld ul li:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.active{
+  animation: Anime 1s
+}
+
+@keyframes Anime{
+  0%{
+   display:  block;
+  }
+  50%{
+    display: none;
+  }
+  100%{
+    display: block;
+  }
+}
